@@ -4,3 +4,4 @@ pyobjc_framework_Quartz==11.0
 Quartz==0.0.1.dev0
 setuptools==65.5.0
 streamlit==1.42.0
+plotly==5.18.0

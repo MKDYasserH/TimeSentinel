@@ -32,10 +32,12 @@ class WindowTracker:
                 }
         return None
 
-    def track_windows(self, callback=None):
+    def track_windows(self, callback=None, stop_event=None):
         """Continuously track window changes."""
         try:
             while True:
+                if stop_event is not None and stop_event.is_set():
+                    break
                 current_window = self.get_active_window_info()
                 
                 if current_window and current_window != self.current_window:
@@ -49,6 +51,8 @@ class WindowTracker:
                 
                 time.sleep(1)  # Check every second
         except KeyboardInterrupt:
+            pass
+        finally:
             if self.current_window and callback:
                 duration = (datetime.now() - self.last_window_switch).total_seconds()
                 callback(self.current_window, duration)

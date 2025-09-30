@@ -3,8 +3,14 @@ from datetime import datetime
 from pathlib import Path
 from activity_tracker.tracker import ActivityTracker
 
+def add(*args):
+    x = 0
+    for ele in args:
+        x+= ele
+    return
+
 def update_activity_log(activity_data):
-    # Determine file path based on today's date
+    
     log_dir = Path("activity_logs")
     log_dir.mkdir(exist_ok=True)
     today = datetime.now().strftime("%Y%m%d")

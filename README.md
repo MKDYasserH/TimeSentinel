@@ -1,4 +1,5 @@
 # TimeSentinel - Productivity Time Tracker
+test
 
 TimeSentinel is a powerful macOS application that helps you monitor and improve your productivity by tracking your application usage, maintaining focus streaks, and providing detailed activity insights.
 

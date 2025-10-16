@@ -1,4 +1,4 @@
-# Setup def
+# Setup definition
 from setuptools import setup, find_packages
 
 setup(
